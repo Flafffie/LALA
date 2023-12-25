@@ -1,0 +1,17 @@
+﻿<Window x:Class="LALA.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LALA"
+        mc:Ignorable="d"
+        Title="Student Evaluation System" Height="350" Width="525">
+    <Grid>
+        <ListBox ItemsSource="{Binding Students}" DisplayMemberPath="Name" />
+        <StackPanel>
+            <TextBox Text="{Binding NewStudentName}" />
+            <TextBox Text="{Binding NewStudentGrade}" />
+            <Button Content="Add Student" Command="{Binding AddStudentCommand}" />
+        </StackPanel>
+    </Grid>
+</Window>
